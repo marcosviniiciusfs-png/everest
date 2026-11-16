@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 	<meta charset="UTF-8">
-		<title>Simulead</title>
+		<title>Everest - Soluções Financeiras</title>
 <meta name='robots' content='max-image-preview:large' />
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -101,6 +101,80 @@ src="https://www.facebook.com/tr?id=751852001026491&ev=PageView&noscript=1"
 /* Logo do topo centralizado no celular */
 @media (max-width: 767px) {
 	.elementor-250 .elementor-element.elementor-element-d828396 { text-align: center; }
+}
+
+/* Everest Custom Theme - Preto, Branco e Dourado */
+:root {
+	--everest-black: #000000;
+	--everest-white: #ffffff;
+	--everest-gold: #d4af37;
+	--everest-gold-light: #f0e68c;
+	--everest-dark-bg: #0f0f0f;
+}
+
+body {
+	--wp--preset--color--black: var(--everest-black);
+	--wp--preset--color--white: var(--everest-white);
+}
+
+/* Buttons - Dourado */
+.elementor-button, .wp-element-button, .elementor-button-link {
+	background-color: var(--everest-gold) !important;
+	color: var(--everest-black) !important;
+	border-color: var(--everest-gold) !important;
+}
+
+.elementor-button:hover {
+	background-color: var(--everest-gold-light) !important;
+	border-color: var(--everest-gold-light) !important;
+}
+
+/* Headers - Preto com Dourado */
+h1, h2, h3, h4, h5, h6 {
+	color: var(--everest-black);
+}
+
+h1::before, h2::before, h3::before {
+	content: '';
+	display: inline-block;
+	width: 4px;
+	height: 20px;
+	background-color: var(--everest-gold);
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+/* Contact Information */
+.everest-contact {
+	background-color: var(--everest-dark-bg);
+	color: var(--everest-white);
+	padding: 20px;
+	border-left: 4px solid var(--everest-gold);
+	margin: 20px 0;
+	border-radius: 4px;
+}
+
+.everest-contact strong {
+	color: var(--everest-gold);
+}
+
+/* Footer */
+footer {
+	background-color: var(--everest-black);
+	color: var(--everest-white);
+	padding: 40px 20px;
+	text-align: center;
+	border-top: 3px solid var(--everest-gold);
+}
+
+footer a {
+	color: var(--everest-gold);
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: var(--everest-gold-light);
+	text-decoration: underline;
 }
 </style>
 </head>
@@ -275,7 +349,7 @@ src="https://www.facebook.com/tr?id=751852001026491&ev=PageView&noscript=1"
 								<div class="elementor-field elementor-select-wrapper remove-before ">
 			<div class="select-caret-down-wrapper">
 				<svg aria-hidden="true" class="e-font-icon-svg e-eicon-caret-down" viewBox="0 0 571.4 571.4" xmlns="http://www.w3.org/2000/svg"><path d="M571 393Q571 407 561 418L311 668Q300 679 286 679T261 668L11 418Q0 407 0 393T11 368 36 357H536Q550 357 561 368T571 393Z"></path></svg>			</div>
-			<select name="form_fields[field_9010671]" id="form-field-field_9010671" class="elementor-field-textual elementor-size-lg" required="required">
+			<select name="form_fields[field_9010671]" id="form-field-field_9010671" class="elementor-field-textual elementor-size-lg" required="required">
 									<option value="R$ 5Mil até R$ 30Mil ">R$ 5Mil até R$ 30Mil </option>
 									<option value="R$ 31Mil até R$ 60Mil ">R$ 31Mil até R$ 60Mil </option>
 									<option value="R$ 61Mil até R$ 100Mil">R$ 61Mil até R$ 100Mil</option>
@@ -609,5 +683,32 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
 //# sourceURL=wp-includes/js/wp-emoji-loader.min.js
 </script>
 	<script src="lead-handler.js"></script>
+
+<!-- Everest Footer -->
+<footer>
+	<div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+		<h3 style="color: #d4af37; border-bottom: 2px solid #d4af37; padding-bottom: 10px;">Everest - Soluções Financeiras</h3>
+
+		<div class="everest-contact">
+			<p><strong>📍 Localização:</strong><br>
+			Av. Leopoldino de Oliveira, Sl 702<br>
+			Uberaba, 38060-000, MG - Brasil</p>
+
+			<p style="margin-top: 15px;"><strong>📞 Contato:</strong><br>
+			<a href="tel:+5534991082716" style="color: #d4af37; text-decoration: none; font-weight: bold;">+55 (34) 99108-2716</a></p>
+
+			<p style="margin-top: 15px;"><strong>💬 WhatsApp:</strong><br>
+			<a href="https://wa.me/5534991082716" target="_blank" style="color: #d4af37; text-decoration: none; font-weight: bold;">Clique aqui para chamar no WhatsApp</a></p>
+		</div>
+
+		<div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333;">
+			<p style="font-size: 14px; color: #ccc;">
+				© 2026 Everest Soluções Financeiras. Todos os direitos reservados.<br>
+				Desenvolvido com excelência em preto, branco e dourado.
+			</p>
+		</div>
+	</div>
+</footer>
+
 </body>
 </html>
