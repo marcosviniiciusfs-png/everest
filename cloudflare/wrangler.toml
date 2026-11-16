@@ -1,0 +1,23 @@
+# Worker da Meta Conversions API: recebe o lead do quiz, grava no D1 e envia para a Meta.
+# Também envia cada lead para os CRMs Convex e Kairoz.
+# Segredos (não ficam aqui): META_ACCESS_TOKEN, CRM_TOKEN, KAIROZ_WEBHOOK_URL.
+name = "gedez-capi"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+META_PIXEL_ID = "751852001026491"
+GRAPH_API_VERSION = "v24.0"
+ALLOWED_ORIGINS = "https://gedezcred.simulead.com.br,https://marcosviniiciusfs-png.github.io"
+CRM_URL = "https://app.convexcrm.com.br/api/webhooks/integrations/9a28dd5456014a0598fe77dc50980cfd"
+CRM_TIPO = "Simulação de crédito"
+# META_TEST_EVENT_CODE = "TEST12345"  # descomente para ver os eventos em "Testar eventos" da Meta
+
+# Reenvia eventos pendentes/falhos a cada 15 minutos.
+[triggers]
+crons = ["*/15 * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "gedez-capi"
+database_id = "ecd07f3c-b681-4dae-b839-bc1101ef8590"
